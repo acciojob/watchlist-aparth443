@@ -76,7 +76,7 @@ public class MovieRepository {
         return null;
     }
 
-    public ArrayList<String> getMoviesByDirectorName(String name){
+    public List<String> getMoviesByDirectorName(String name){
         Director d = null;
         for(int i=0;i<dr.size();i++){
             if(dr.get(i).getName().equals(name)){
@@ -85,15 +85,15 @@ public class MovieRepository {
             }
         }
         ArrayList<Movie> am= mp.get(d);
-        ArrayList<String> ar = new ArrayList<>();
+        List<String> ar = new ArrayList<>();
         for(int i=0;i<am.size();i++){
             ar.add(am.get(i).getName());
         }
         return ar;
     }
 
-    public ArrayList<String> findAllMovies(){
-        ArrayList<String> ar = new ArrayList<>();
+    public List<String> findAllMovies(){
+        List<String> ar = new ArrayList<>();
         for(int i=0;i<mv.size();i++){
             ar.add(mv.get(i).getName());
         }
